@@ -38,9 +38,9 @@ def GenTask(text, base):
 
 	t = {}
 	t['answer'] = None
-	t['text'] = text
+	t['text'] = text + f'({base})'
 	t['question'] = sTask
-	t['correctAnswer'] = str(eval(sOriginal))
+	t['correctAnswer'] = FromDec(eval(sOriginal), base)
 	return t
 
 @eel.expose

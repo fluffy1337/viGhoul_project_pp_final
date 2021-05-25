@@ -2,7 +2,7 @@
     <div v-if="currentTask == n">
         <div>
             {{ text }} <span class="bigger">{{ task }}</span> ?<br>
-            <span class="smaller">Ответ введите в виде десятичного числа, без лишних разделителей.</span>
+            <span class="smaller">Ответ введите в той же системе счисления, без лишних разделителей.</span>
         </div>
         <div class="flex">
             <input type="text" v-model="answer" placeholder="Введите ответ" @keydown="$event.which == 13 && $emit('answer', answer)" ref="ans">
